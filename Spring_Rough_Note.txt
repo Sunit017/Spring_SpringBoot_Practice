@@ -1,0 +1,67 @@
+
+IOC = Inversion of Control
+Principle 
+
+DI = Dependency Injection == Springframework inject object in our application 
+Design Pattern 
+3 types = constructor Injection , setter injection , filed injection 
+
+// Convention over configuration // SpringBoot 
+
+@component == if we are annotation with @component it means we are telling spring that create the object of it and manage it inside ioc 
+
+@primary = it will prefer that class if any confusion 
+
+@qualifier = if you have multiple bean class , it helps to inject needed bean 
+
+@autowirred = it means it will not create the object , it will make connection between them  // field injection  // Auto Dependency Injection
+
+Springcore -- Bean Factory  // Lazy Container == until you call getBean Method it won't create any object 
+Spring Context = Application Context  // Eager Container 
+
+lightweight = not much dependency 
+
+dependency on == help us to intialize dependency class  first 
+<bean id="c" class="com.car" depends-on=""e> </bean>
+<bean id ="e" class="com.engine" depends-on="f"> </bean>
+<bean id ="f" class="com.fuel" > </bean>
+
+dependency check -
+
+@Required == It mandatory 
+	
+autowiring :
+secondary type automatically IOC will Inject 
+setter - byType,byName / constructor -constructor
+autodetect 
+
+MethodInvokingFactoryBean - helper class = 2 - method setStaticMethod(String staticMethod ),setArgument(List argument )  
+
+if you want to use this native query in the Spring Boot project then we have to take the help of @Query Annotation and we have to set an attribute nativeQuery=true
+in Query annotation to mark the query as native
+
+@ElementCollection---
+======================
+tells the compiler that we are mapping a collection, in which, @CollectionTable gives the name of the target table and then
+@JoinColumn specifies the actually column
+
+
+
+Spring Framework ------------
+=======================================
+Spring 6
+-----------
+IOC - Inversion of Controller - in spring from object creation to managing and destroying the object taken care by IOC / It is a principle 
+Certain technique to do it is Dependency Inject (DI) / actual implementation of IOC 
+3 ways to achieve it 
+1. Constructor Injection 
+2.Setter Injection 
+3.Field Injection 
+
+Dependency Injection ----
+===========================
+SpringApplication.run() - it basically create a container inside the the jvm 
+@Component = it will create the object
+@Autowireed = it will inject the object // field injection and setter injection have to use @Autowired // it will search byType 
+@Primary = in case of confusion this call can be prefer 
+@Qualifier (bean name ) - the bean you want to prefer and @Qualifier(laptop) , if the bean name is Laptop 
