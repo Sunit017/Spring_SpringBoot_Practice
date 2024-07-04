@@ -3,12 +3,16 @@
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="dev" class="com.example.SpringDemo.Dev">
+    <bean id="dev" class="com.example.SpringDemo.Dev" autowire="byName" >
 <!--        <property name="age" value="12"></property>-->
 <!--        <constructor-arg value="18"></constructor-arg>-->
 <!--        <property name="laptop" ref="lap"></property>-->
-        <constructor-arg ref="lap"></constructor-arg>
+<!--        <constructor-arg ref="lap"></constructor-arg>-->
+
     </bean>
 
-    <bean id="lap"  class="com.example.SpringDemo.Laptop"></bean>
+    <bean id="com"  class="com.example.SpringDemo.Laptop">
+    </bean>
+    <bean id="des" class="com.example.SpringDemo.Desktop">
+    </bean>
 </beans>

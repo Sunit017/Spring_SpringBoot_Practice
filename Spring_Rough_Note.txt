@@ -45,7 +45,7 @@ in Query annotation to mark the query as native
 tells the compiler that we are mapping a collection, in which, @CollectionTable gives the name of the target table and then
 @JoinColumn specifies the actually column
 
-
+================================================================================================================================================================
 
 Spring Framework ------------
 =======================================
@@ -65,3 +65,23 @@ SpringApplication.run() - it basically create a container inside the the jvm
 @Autowireed = it will inject the object // field injection and setter injection have to use @Autowired // it will search byType 
 @Primary = in case of confusion this call can be prefer 
 @Qualifier (bean name ) - the bean you want to prefer and @Qualifier(laptop) , if the bean name is Laptop 
+
+Spring XML Configuration --
+============================
+By writting Applicationcontext it will create a container inside the jvm but won't create object so for that we need to spring xml bean configuration
+Spring xml use DTD tag 
+
+How to Inject the value by setter and constructor injection ?
+- generate the setter method and do configuration in spring.xml by <property name ="" value=""> 
+- genrate the constructor and configure in spring.xml <constructor-arg value> if there 2 properties we can use index like <constructor-arg index="0" value="">
+
+for refernce variable - first we have to generate getter and setter and then for spring configuration we have to do by <property name ="" ref="">
+
+AutoWire in spring 
+-----------------------
+<bean id="" name ="" autowire ="byType"/"byName">
+
+
+Front Controller --
+======================
+when you send request from client first it goes to front controller which comes before controller , spring will create this for you , sees all the request mapping 

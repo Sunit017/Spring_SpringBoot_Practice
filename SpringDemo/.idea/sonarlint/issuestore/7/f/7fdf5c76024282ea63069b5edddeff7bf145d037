@@ -1,3 +1,9 @@
 
-•	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(²‰Û®J$4f14e409-c6c7-4bf3-b207-3cb938480173
-f	java:S106'"+Replace this use of System.out by a logger.(¹ÌÿJ$d53c4685-3e96-4c70-9e7c-d736f31f84bc
+•	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(²‰Û®J$3baa5c9f-7fec-4324-a4ee-917531b7cfe4
+Ä
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(©¦˜ñ8˜ˆç¿‡2J$79101303-4dcb-4ab7-bcba-29b3a7a545da
+ƒ	java:S125"<This block of commented-out lines of code should be removed.(¾°×şÿÿÿÿ8Œå©¿‡2J$1f1076c5-bdcd-453d-b282-34090209273b
+~	java:S125"<This block of commented-out lines of code should be removed.(„ÉÍæ8ÅÎ¨¿‡2J$cb86da44-dc0f-42a7-a0a4-686a441f783e
+~	java:S125"<This block of commented-out lines of code should be removed.(ˆÖ³¿8í§¿‡2J$d545a05c-503e-4c16-b933-518a22feba56
+ƒ	java:S125#"<This block of commented-out lines of code should be removed.(²áÓÆüÿÿÿÿ8î¸©¿‡2J$624fda8c-caad-44a0-8b57-fe705293a9d4
+f	java:S1061"+Replace this use of System.out by a logger.(¹ÌÿJ$2c66acc9-b7f1-4b55-bac0-e23ac66d1147
