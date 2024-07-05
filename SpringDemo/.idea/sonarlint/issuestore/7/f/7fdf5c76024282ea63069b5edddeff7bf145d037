@@ -1,9 +1,9 @@
 
-•	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(²‰Û®J$3baa5c9f-7fec-4324-a4ee-917531b7cfe4
+•	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(²‰Û®J$57f66fc4-f792-43f4-bb46-f019bb687871
 Ä
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(©¦˜ñ8˜ˆç¿‡2J$79101303-4dcb-4ab7-bcba-29b3a7a545da
-ƒ	java:S125"<This block of commented-out lines of code should be removed.(¾°Ž×þÿÿÿÿ8Œå©¿‡2J$1f1076c5-bdcd-453d-b282-34090209273b
-~	java:S125"<This block of commented-out lines of code should be removed.(„ÉÍæ8ÅÎ¨¿‡2J$cb86da44-dc0f-42a7-a0a4-686a441f783e
-~	java:S125"<This block of commented-out lines of code should be removed.(ˆÖ³¿8í§¿‡2J$d545a05c-503e-4c16-b933-518a22feba56
-ƒ	java:S125#"<This block of commented-out lines of code should be removed.(²áÓÆüÿÿÿÿ8î¸©¿‡2J$624fda8c-caad-44a0-8b57-fe705293a9d4
-f	java:S1061"+Replace this use of System.out by a logger.(¹ÌÿJ$2c66acc9-b7f1-4b55-bac0-e23ac66d1147
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(©¦˜ñ8˜ˆç¿‡2J$d6ee666f-aaba-43ee-b7bb-d965a3448ef7
+ƒ	java:S125"<This block of commented-out lines of code should be removed.(¾°Ž×þÿÿÿÿ8Œå©¿‡2J$7ba5bff2-6104-46d3-865b-9845022fc308
+~	java:S125"<This block of commented-out lines of code should be removed.(„ÉÍæ8ÅÎ¨¿‡2J$586720a9-5db9-4526-af1f-d692c5ae374d
+~	java:S125"<This block of commented-out lines of code should be removed.(ˆÖ³¿8í§¿‡2J$c1c692b3-dd82-4284-ab0b-fc55df8cec2f
+ƒ	java:S125#"<This block of commented-out lines of code should be removed.(²áÓÆüÿÿÿÿ8î¸©¿‡2J$4e532988-9572-4cd8-adec-4606117f36bb
+f	java:S1061"+Replace this use of System.out by a logger.(¹ÌÿJ$ba864bcd-e903-4d80-b197-d55787ab505f

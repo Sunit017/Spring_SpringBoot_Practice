@@ -85,3 +85,7 @@ AutoWire in spring
 Front Controller --
 ======================
 when you send request from client first it goes to front controller which comes before controller , spring will create this for you , sees all the request mapping 
+
+Jackson library isresponsible for for converting your java object to json and json to java object .
+
+By Default methods are get method 
