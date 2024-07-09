@@ -72,8 +72,8 @@ By writting Applicationcontext it will create a container inside the jvm but won
 Spring xml use DTD tag 
 
 How to Inject the value by setter and constructor injection ?
-- generate the setter method and do configuration in spring.xml by <property name ="" value=""> 
-- genrate the constructor and configure in spring.xml <constructor-arg value> if there 2 properties we can use index like <constructor-arg index="0" value="">
+- generate the setter method and do configuration in spring.xml by ========= <property name ="" value=""> 
+- genrate the constructor and configure in spring.xml <constructor-arg value> if there 2 properties we can use index like ===<constructor-arg index="0" value="">
 
 for refernce variable - first we have to generate getter and setter and then for spring configuration we have to do by <property name ="" ref="">
 
