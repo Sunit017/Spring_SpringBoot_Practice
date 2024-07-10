@@ -61,8 +61,19 @@ public class ProductController {
             return new ResponseEntity<>("updated",HttpStatus.OK);
         else
             return new ResponseEntity<>("Not Updated",HttpStatus.BAD_REQUEST);
-
-
-
     }
+    @DeleteMapping("/product/{id}")
+    public  ResponseEntity<String> deleteProduct(@PathVariable int id)
+    {
+         productService.deleteProduct(id);
+         return new ResponseEntity<>("deleted Successfully ",HttpStatus.OK);
+    }
+
+    @GetMapping("/product/search")
+    public ResponseEntity<List<Product>> searchProducts(@RequestParam String keyword)
+    {
+        List<Product> products=productService.searchProducts(keyword);
+        return  new ResponseEntity<>(products,HttpStatus.OK);
+    }
+
 }

@@ -37,6 +37,8 @@ autodetect
 
 MethodInvokingFactoryBean - helper class = 2 - method setStaticMethod(String staticMethod ),setArgument(List argument )  
 
+@Query----------
+=========================
 if you want to use this native query in the Spring Boot project then we have to take the help of @Query Annotation and we have to set an attribute nativeQuery=true
 in Query annotation to mark the query as native
 
@@ -89,3 +91,18 @@ when you send request from client first it goes to front controller which comes 
 Jackson library isresponsible for for converting your java object to json and json to java object .
 
 By Default methods are get method 
+
+
+Spring Data JPA---
+==============================
+to transfer data from service to repository we need something 
+ORM - object relation mapping / Hibernate , MyBetis these are the orm tool 
+JPA - Java Persistence API / It's just a standard , Hibernate Implements those Standard 
+Spring Data JPA - it's a module of spring application 
+
+@Requestbody = accept the hole data as json only 
+@RequestPart = accept the part part of data 
+
+
+JPQL - Java Persistence Query Language - if you want to search based on multiple field , Same as SQL but thing is in SQL we use table and here we will use classnam
+and in sql use column name and here field name 

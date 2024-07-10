@@ -36,4 +36,12 @@ public class ProductService {
         product.setImageName(multipartFile.getOriginalFilename());
         return productRepo.save(product);
     }
+
+    public void deleteProduct(int id) {
+        productRepo.deleteById(id);
+    }
+
+    public List<Product> searchProducts(String keyword) {
+        return productRepo.searchProduct(keyword);
+    }
 }
