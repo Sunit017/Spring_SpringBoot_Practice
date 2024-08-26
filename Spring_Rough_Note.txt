@@ -104,5 +104,5 @@ Spring Data JPA - it's a module of spring application
 @RequestPart = accept the part part of data 
 
 
-JPQL - Java Persistence Query Language - if you want to search based on multiple field , Same as SQL but thing is in SQL we use table and here we will use classnam
+JPQL - Java Persistence Query Language - if you want to search based on multiple field , Same as SQL but thing is in SQL we use table and here we will use classname 
 and in sql use column name and here field name 
