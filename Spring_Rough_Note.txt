@@ -106,3 +106,30 @@ Spring Data JPA - it's a module of spring application
 
 JPQL - Java Persistence Query Language - if you want to search based on multiple field , Same as SQL but thing is in SQL we use table and here we will use classname 
 and in sql use column name and here field name 
+
+
+
+
+Interview Question ---
+---------------------------
+1. How do you secure the endpoints of springboot application?
+ans - spring security , jwt , oAuth2  
+2. how will you reduce response time of you api request ?
+ans - caching , optimize database queries , load balancing , asyncronous processing for non critical class
+3. how do you optimize the performance of your springboot application ?
+ans - caching , optimize database queries , reduce auto configurations, use concorence 
+4. @RequestParam - is used to extract query parameters from the URL = key and value pair - ? ex - http://example.com/api/users?name=John&age=30
+    @PathVariable annotation is used to extract values from URI template variables.
+	@RequestBody annotation is used to map the body of an HTTP request to a method parameter
+	
+5. How do you handle concurrent users in springboot application ?
+ans - 
+
+StoreProcudure - sql code saved for repeated use 
+    
+
+
+What is the diffence between application.properties file and application.yml file ?
+Ans - The file format for application .properties file is key value pair and application.yml is YAML format which supports hierarchical data structures.
+    - Readability - simple and easier for small configuration , become less readability , More readable for hierarchical or nested configurations Suitable for complex configurations
+
