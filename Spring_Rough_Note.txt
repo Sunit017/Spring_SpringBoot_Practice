@@ -37,6 +37,26 @@ autodetect
 
 MethodInvokingFactoryBean - helper class = 2 - method setStaticMethod(String staticMethod ),setArgument(List argument )  
 
+
+Q - What is the scope of bean ?
+Ans - Scope means how many instance of your bean will be created and manage by spring IOC , By default spring is singleton scope 
+
+Q- What are the differnt type of scope ?
+Ans - Singleton (Single bean through out ) , Prototype, Request ,Session and application 
+
+Q - What is the Spring AOP ?
+Ans - separate cross-cutting concerns from the business logic of your application .
+
+Q- What is circular dependencies ?
+Ans - When Service depend upon each other call circular dependency. Constructor injection can cause circular dependency .Setter injection or lazy annotation can resolve those issue .
+
+@SpringbootApplication 
+- it will bootstrap application - 1.@configuration 	-mark the class as a source of spring bean definitions .
+                                 2.@componentscan - scan packages for spring component 
+								 3.@EnableAutoConfiguration - automatically configure spring components .
+								 
+@RequestParam - Extract value from query parameters , @pathvariable - extract the value from uri path 
+
 @Query----------
 =========================
 if you want to use this native query in the Spring Boot project then we have to take the help of @Query Annotation and we have to set an attribute nativeQuery=true
@@ -132,4 +152,17 @@ StoreProcudure - sql code saved for repeated use
 What is the diffence between application.properties file and application.yml file ?
 Ans - The file format for application .properties file is key value pair and application.yml is YAML format which supports hierarchical data structures.
     - Readability - simple and easier for small configuration , become less readability , More readable for hierarchical or nested configurations Suitable for complex configurations
+	
+
+Hibernate/JPA =====
+-------------------------
+Hibernate = this is an orm tool / JPA - this a specification (set of rule )
+
+to perform any operation with database from java application we can do it by hibernate but for this we need 
+
+Session -> session factory ()-> configuration (data source config ) u have to do it in config.xml
+
+save , get 
+
+in every save,update and delete  method we have to do session.beginTranscation(), session.getTranscation.commit()
 
