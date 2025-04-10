@@ -1,0 +1,78 @@
+HIBERNATE --
+
+ORM - Mapping Object to database table
+Why ORM - 
+Eliminates boilerplate jdbc code 
+Automatic Transcation management 
+portability across differnt database 
+Reduce sql depedency with hql
+
+JPA - API specification for ORM
+Hibernate - popular jpa implementation with advanced feature 
+
+
+HIBERNATE Architecutre 
+----------------------
+Session Factory (creates session ,heavy object , singleton)
+Session (interact with DB , light weight , short-lived )
+Transcation(Manages commit / rollback )
+Query & criteria api (fetching data efficently )
+hibernate configuration file (hibernate.cfg.xml)
+
+HIBERNATE LifeCycle 
+-------------------
+Load Hibernate configuration
+create session factory
+open session
+begin transcation
+perform crud operation 
+commit transcation
+close session
+
+
+
+
+
+
+
+
+
+ Project Architecture 
+ microservice communicate each other 
+ what are the feature you implemented in api gateway - authentication and authorization , rate limiting 
+ Design pattern in java 
+ explain me solid principle 
+ consider i want to build springboot application for employee management system and perform all the crud operation , tell me how you build it and tell me all the procedure 
+ how do you connect your spring application with database 
+ you want call api which return list of employee and thing is it is taking so much time how you optimize 
+ what is the purpose of indexes 
+ what are the differnt types of join 
+ few features of java 8 
+ list of employee , to find the age is greater than 50 
+ how you handle exception in java 
+ types of exception 
+ what is use of finally block - some resources you opened in try block and trying to do close up activity suppose database connection , file open 
+ at what time finally block won't execute - if there is command like sysytem.exit(), when your jvm is terminated , some error occure and program unable to go next step
+ what is deadlock - / how to avoid this type of condition 
+ do you know about collection , which collection you have worked on 
+ hashmap vs concurrent hashmap
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Deloitte 
+--------
+Immutable class in java , how can you create immutable class in java ?
+how does immutable help in multi threading ?
+purpose of serialization in pojo,and in what scenario is it commonly used ?
+suppose you need to send a java object over a network in a distributed application . what challenges might arise, and how would you handle them ?
+what is the singleton pattern , how implemented it ?
+how would you modify a singleton implementation to make it thread safe in a multi threaded enviorment ?
+what is the hashcode equal contract and why it is important 
+if you override equal() but do not override hashcode() what could go wrong when storing object in a hashmap ?
+
+  
