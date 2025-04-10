@@ -132,4 +132,8 @@ StoreProcudure - sql code saved for repeated use
 What is the diffence between application.properties file and application.yml file ?
 Ans - The file format for application .properties file is key value pair and application.yml is YAML format which supports hierarchical data structures.
     - Readability - simple and easier for small configuration , become less readability , More readable for hierarchical or nested configurations Suitable for complex configurations
+	
+What is the default server use in springboot ?
+Ans - Tomcat is the default server use , 
+how 
 
