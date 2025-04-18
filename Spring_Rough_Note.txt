@@ -83,4 +83,3 @@ Ans - The file format for application .properties file is key value pair and app
     - Readability - simple and easier for small configuration , become less readability , More readable for hierarchical or nested configurations Suitable for complex configurations
 	
 
-
