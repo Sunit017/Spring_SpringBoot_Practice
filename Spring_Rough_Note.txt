@@ -1,42 +1,64 @@
 
-IOC = Inversion of Control
-Principle 
+Spring Framework ------------
+=======================================
+Spring 6
+-----------
+IOC - Inversion of Controller - in spring from object creation to managing and destroying the object taken care by IOC / It is a principle 
+Certain technique to do it is Dependency Inject (DI) / actual implementation of IOC 
+3 ways to achieve it 
+1. Constructor Injection 
+2.Setter Injection 
+3.Field Injection 
 
-DI = Dependency Injection == Springframework inject object in our application 
-Design Pattern 
-3 types = constructor Injection , setter injection , filed injection 
+Dependency Injection ----
+===========================
+DI = It is Design Pattern , where spring automatically inject the depedencies into component without manual instantiation . 
+3 types = constructor Injection , setter injection , filed injection
 
-// Convention over configuration // SpringBoot 
 
-@component == if we are annotation with @component it means we are telling spring that create the object of it and manage it inside ioc 
-
-@primary = it will prefer that class if any confusion 
-
-@qualifier = if you have multiple bean class , it helps to inject needed bean 
-
-@autowirred = it means it will not create the object , it will make connection between them  // field injection  // Auto Dependency Injection
+SpringApplication.run() - it basically create a container inside the the jvm 
+@Component = If we are annotation any class as component it register as bean in springboot application .
+@Autowired = Automatically inject the bean where it is needed , Use in 3 types - setter Injection, Constructor Injection , Field Injection 
+@Primary = in case of confusion this call can be prefer 
+@Qualifier (bean name ) - the bean you want to prefer and @Qualifier(laptop) , if the bean name is Laptop 
 
 Springcore -- Bean Factory  // Lazy Container == until you call getBean Method it won't create any object 
-Spring Context = Application Context  // Eager Container 
-
-lightweight = not much dependency 
-
-dependency on == help us to intialize dependency class  first 
-<bean id="c" class="com.car" depends-on=""e> </bean>
-<bean id ="e" class="com.engine" depends-on="f"> </bean>
-<bean id ="f" class="com.fuel" > </bean>
-
-dependency check -
-
-@Required == It mandatory 
-	
-autowiring :
-secondary type automatically IOC will Inject 
-setter - byType,byName / constructor -constructor
-autodetect 
+Spring Context = Application Context  // Eager Container
 
 MethodInvokingFactoryBean - helper class = 2 - method setStaticMethod(String staticMethod ),setArgument(List argument )  
 
+
+Spring XML Configuration --
+============================
+By writting Applicationcontext it will create a container inside the jvm but won't create object so for that we need to spring xml bean configuration
+Spring xml use DTD tag 
+
+How to Inject the value by setter and constructor injection ?
+- generate the setter method and do configuration in spring.xml by ========= <property name ="" value=""> 
+- genrate the constructor and configure in spring.xml <constructor-arg value> if there 2 properties we can use index like ===<constructor-arg index="0" value="">
+
+for refernce variable - first we have to generate getter and setter and then for spring configuration we have to do by <property name ="" ref="">
+
+Front Controller --
+======================
+when you send request from client first it goes to front controller which comes before controller , spring will create this for you , sees all the request mapping 
+Jackson library isresponsible for for converting your java object to json and json to java object .
+By Default methods are get method 
+
+@Requestbody = accept the hole data as json only 
+@RequestPart = accept the part part of data 
+
+Interview Question ---
+---------------------------
+1. How do you secure the endpoints of springboot application?
+ans - spring security , jwt , oAuth2  
+2. how will you reduce response time of you api request ?
+ans - caching , optimize database queries , load balancing , asyncronous processing for non critical class
+3. how do you optimize the performance of your springboot application ?
+ans - caching , optimize database queries , reduce auto configurations, use concorence 
+4. @RequestParam - is used to extract query parameters from the URL = key and value pair - ? ex - http://example.com/api/users?name=John&age=30
+    @PathVariable annotation is used to extract values from URI template variables.
+	@RequestBody annotation is used to map the body of an HTTP request to a method parameter
 
 Q - What is the scope of bean ?
 Ans - Scope means how many instance of your bean will be created and manage by spring IOC , By default spring is singleton scope 
@@ -56,113 +78,9 @@ Ans - When Service depend upon each other call circular dependency. Constructor 
 								 3.@EnableAutoConfiguration - automatically configure spring components .
 								 
 @RequestParam - Extract value from query parameters , @pathvariable - extract the value from uri path 
-
-@Query----------
-=========================
-if you want to use this native query in the Spring Boot project then we have to take the help of @Query Annotation and we have to set an attribute nativeQuery=true
-in Query annotation to mark the query as native
-
-@ElementCollection---
-======================
-tells the compiler that we are mapping a collection, in which, @CollectionTable gives the name of the target table and then
-@JoinColumn specifies the actually column
-
-================================================================================================================================================================
-
-Spring Framework ------------
-=======================================
-Spring 6
------------
-IOC - Inversion of Controller - in spring from object creation to managing and destroying the object taken care by IOC / It is a principle 
-Certain technique to do it is Dependency Inject (DI) / actual implementation of IOC 
-3 ways to achieve it 
-1. Constructor Injection 
-2.Setter Injection 
-3.Field Injection 
-
-Dependency Injection ----
-===========================
-SpringApplication.run() - it basically create a container inside the the jvm 
-@Component = it will create the object
-@Autowireed = it will inject the object // field injection and setter injection have to use @Autowired // it will search byType 
-@Primary = in case of confusion this call can be prefer 
-@Qualifier (bean name ) - the bean you want to prefer and @Qualifier(laptop) , if the bean name is Laptop 
-
-Spring XML Configuration --
-============================
-By writting Applicationcontext it will create a container inside the jvm but won't create object so for that we need to spring xml bean configuration
-Spring xml use DTD tag 
-
-How to Inject the value by setter and constructor injection ?
-- generate the setter method and do configuration in spring.xml by ========= <property name ="" value=""> 
-- genrate the constructor and configure in spring.xml <constructor-arg value> if there 2 properties we can use index like ===<constructor-arg index="0" value="">
-
-for refernce variable - first we have to generate getter and setter and then for spring configuration we have to do by <property name ="" ref="">
-
-AutoWire in spring 
------------------------
-<bean id="" name ="" autowire ="byType"/"byName">
-
-
-Front Controller --
-======================
-when you send request from client first it goes to front controller which comes before controller , spring will create this for you , sees all the request mapping 
-
-Jackson library isresponsible for for converting your java object to json and json to java object .
-
-By Default methods are get method 
-
-
-Spring Data JPA---
-==============================
-to transfer data from service to repository we need something 
-ORM - object relation mapping / Hibernate , MyBetis these are the orm tool 
-JPA - Java Persistence API / It's just a standard , Hibernate Implements those Standard 
-Spring Data JPA - it's a module of spring application 
-
-@Requestbody = accept the hole data as json only 
-@RequestPart = accept the part part of data 
-
-
-JPQL - Java Persistence Query Language - if you want to search based on multiple field , Same as SQL but thing is in SQL we use table and here we will use classname 
-and in sql use column name and here field name 
-
-
-
-
-Interview Question ---
----------------------------
-1. How do you secure the endpoints of springboot application?
-ans - spring security , jwt , oAuth2  
-2. how will you reduce response time of you api request ?
-ans - caching , optimize database queries , load balancing , asyncronous processing for non critical class
-3. how do you optimize the performance of your springboot application ?
-ans - caching , optimize database queries , reduce auto configurations, use concorence 
-4. @RequestParam - is used to extract query parameters from the URL = key and value pair - ? ex - http://example.com/api/users?name=John&age=30
-    @PathVariable annotation is used to extract values from URI template variables.
-	@RequestBody annotation is used to map the body of an HTTP request to a method parameter
-	
-5. How do you handle concurrent users in springboot application ?
-ans - 
-
-StoreProcudure - sql code saved for repeated use 
-    
-
-
 What is the diffence between application.properties file and application.yml file ?
 Ans - The file format for application .properties file is key value pair and application.yml is YAML format which supports hierarchical data structures.
     - Readability - simple and easier for small configuration , become less readability , More readable for hierarchical or nested configurations Suitable for complex configurations
 	
 
-Hibernate/JPA =====
--------------------------
-Hibernate = this is an orm tool / JPA - this a specification (set of rule )
-
-to perform any operation with database from java application we can do it by hibernate but for this we need 
-
-Session -> session factory ()-> configuration (data source config ) u have to do it in config.xml
-
-save , get 
-
-in every save,update and delete  method we have to do session.beginTranscation(), session.getTranscation.commit()
 

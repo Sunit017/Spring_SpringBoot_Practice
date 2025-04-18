@@ -9,6 +9,7 @@ Reduce sql depedency with hql
 
 JPA - API specification for ORM
 Hibernate - popular jpa implementation with advanced feature 
+Spring Data JPA - it's a module of spring application 
 
 
 HIBERNATE Architecutre 
@@ -29,6 +30,18 @@ perform crud operation
 commit transcation
 close session
 
+
+@Query----------
+=========================
+if you want to use this native query in the Spring Boot project then we have to take the help of @Query Annotation and we have to set an attribute nativeQuery=true
+in Query annotation to mark the query as native
+@ElementCollection---
+======================
+tells the compiler that we are mapping a collection, in which, @CollectionTable gives the name of the target table and then
+@JoinColumn specifies the actually column
+
+JPQL - Java Persistence Query Language - if you want to search based on multiple field , Same as SQL but thing is in SQL we use table and here we will use classname 
+and in sql use column name and here field name 
 
 
 
@@ -58,21 +71,5 @@ close session
  hashmap vs concurrent hashmap
  
  
- 
- 
- 
- 
- 
- 
-Deloitte 
---------
-Immutable class in java , how can you create immutable class in java ?
-how does immutable help in multi threading ?
-purpose of serialization in pojo,and in what scenario is it commonly used ?
-suppose you need to send a java object over a network in a distributed application . what challenges might arise, and how would you handle them ?
-what is the singleton pattern , how implemented it ?
-how would you modify a singleton implementation to make it thread safe in a multi threaded enviorment ?
-what is the hashcode equal contract and why it is important 
-if you override equal() but do not override hashcode() what could go wrong when storing object in a hashmap ?
 
   
