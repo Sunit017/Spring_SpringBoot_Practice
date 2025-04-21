@@ -9,6 +9,7 @@ Reduce sql depedency with hql
 
 JPA - API specification for ORM
 Hibernate - popular jpa implementation with advanced feature 
+Spring Data JPA - it's a module of spring application 
 
 
 HIBERNATE Architecutre 
@@ -29,6 +30,18 @@ perform crud operation
 commit transcation
 close session
 
+
+@Query----------
+=========================
+if you want to use this native query in the Spring Boot project then we have to take the help of @Query Annotation and we have to set an attribute nativeQuery=true
+in Query annotation to mark the query as native
+@ElementCollection---
+======================
+tells the compiler that we are mapping a collection, in which, @CollectionTable gives the name of the target table and then
+@JoinColumn specifies the actually column
+
+JPQL - Java Persistence Query Language - if you want to search based on multiple field , Same as SQL but thing is in SQL we use table and here we will use classname 
+and in sql use column name and here field name 
 
 
 SQL --
@@ -69,37 +82,5 @@ HAVING:
 Used to filter groups after aggregation.
 Works like WHERE, but WHERE is used before aggregation and HAVING is used after.
 
-
-
-
-
-
-
-
- Project Architecture 
- microservice communicate each other 
- what are the feature you implemented in api gateway - authentication and authorization , rate limiting 
- Design pattern in java 
- explain me solid principle 
- consider i want to build springboot application for employee management system and perform all the crud operation , tell me how you build it and tell me all the procedure 
- how do you connect your spring application with database 
- you want call api which return list of employee and thing is it is taking so much time how you optimize 
- what is the purpose of indexes 
- what are the differnt types of join 
- few features of java 8 
- list of employee , to find the age is greater than 50 
- how you handle exception in java 
- types of exception 
- what is use of finally block - some resources you opened in try block and trying to do close up activity suppose database connection , file open 
- at what time finally block won't execute - if there is command like sysytem.exit(), when your jvm is terminated , some error occure and program unable to go next step
- what is deadlock - / how to avoid this type of condition 
- do you know about collection , which collection you have worked on 
- hashmap vs concurrent hashmap
- 
- 
- 
- 
- 
- 
 
   
