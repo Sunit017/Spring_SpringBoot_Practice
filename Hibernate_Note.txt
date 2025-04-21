@@ -31,6 +31,45 @@ close session
 
 
 
+SQL --
+=======
+Join Type	Description
+INNER JOIN	Returns only matching rows from both tables.
+LEFT JOIN	Returns all rows from the left table and matching rows from the right table (NULL if no match).
+RIGHT JOIN	Returns all rows from the right table and matching rows from the left table (NULL if no match).
+FULL OUTER JOIN	Returns all rows from both tables (MySQL does not support it directly).
+CROSS JOIN	Returns the Cartesian product of both tables (each row in the first table joins with every row in the second table).
+
+
+ What is a Transaction?
+A transaction in a database is a sequence of operations (like insert, update, delete) that are treated as a single logical unit of work.
+It ensures that either all operations succeed (commit) or none are applied (rollback), preserving data integrity.
+ACID Properties of Transactions
+ACID stands for:
+Property	Description
+A - Atomicity	Ensures all steps in a transaction are completed. If any step fails, the entire transaction is rolled back.
+C - Consistency	The database should remain in a valid state before and after the transaction. It ensures business rules and constraints are maintained.
+I - Isolation	Transactions are executed independently. One transaction’s operations should not affect others running at the same time.
+D - Durability	Once a transaction is committed, its changes are permanently saved, even if there's a system crash.
+
+What is Normalization?
+Normalization is a process in database design to organize data in such a way that:
+Redundancy is reduced (no repeated data),
+Data integrity is improved,
+Efficient storage and easy maintenance are ensured.
+It involves dividing large, complex tables into smaller, well-structured ones and defining relationships between them.
+
+GROUP BY and HAVING Clause in SQL
+Both are used for grouping and filtering aggregated data, but they serve different purposes.
+GROUP BY:
+Groups rows based on one or more columns.
+Used with aggregate functions like SUM(), AVG(), COUNT(), MAX(), etc.
+Helps in generating summary data.
+HAVING:
+Used to filter groups after aggregation.
+Works like WHERE, but WHERE is used before aggregation and HAVING is used after.
+
+
 
 
 
@@ -62,17 +101,5 @@ close session
  
  
  
- 
- 
-Deloitte 
---------
-Immutable class in java , how can you create immutable class in java ?
-how does immutable help in multi threading ?
-purpose of serialization in pojo,and in what scenario is it commonly used ?
-suppose you need to send a java object over a network in a distributed application . what challenges might arise, and how would you handle them ?
-what is the singleton pattern , how implemented it ?
-how would you modify a singleton implementation to make it thread safe in a multi threaded enviorment ?
-what is the hashcode equal contract and why it is important 
-if you override equal() but do not override hashcode() what could go wrong when storing object in a hashmap ?
 
   

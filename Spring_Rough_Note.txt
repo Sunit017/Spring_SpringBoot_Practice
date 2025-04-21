@@ -14,7 +14,7 @@ Design Pattern
 
 @qualifier = if you have multiple bean class , it helps to inject needed bean 
 
-@autowirred = it means it will not create the object , it will make connection between them  // field injection  // Auto Dependency Injection
+@autowirred = @Autowired in Spring Boot (and Spring Framework) is used for automatic dependency injection — it tells Spring to automatically inject a bean where it's needed.
 
 Springcore -- Bean Factory  // Lazy Container == until you call getBean Method it won't create any object 
 Spring Context = Application Context  // Eager Container 
@@ -112,6 +112,16 @@ Jackson library isresponsible for for converting your java object to json and js
 
 By Default methods are get method 
 
+What is AOP?
+=============
+AOP is a programming paradigm that helps you separate cross-cutting concerns (like logging, security, transactions) from your core business logic.
+👉 Cross-cutting concerns = code that appears in many places but isn’t part of the main logic.What is AOP?
+n real projects, I used AOP for:
+Logging: Automatically logging method entries and exits in service layer.
+Performance Monitoring: Measuring execution time of methods.
+Auditing: Tracking changes in sensitive data updates.
+Transaction Management: Using @Transactional (which is built using AOP internally in Spring).
+
 
 Spring Data JPA---
 ==============================
@@ -127,8 +137,26 @@ Spring Data JPA - it's a module of spring application
 JPQL - Java Persistence Query Language - if you want to search based on multiple field , Same as SQL but thing is in SQL we use table and here we will use classname 
 and in sql use column name and here field name 
 
+HOW DO YOU HANDLE CACHING IN SPRING BOOT?
+Ans - Spring Boot provides declarative caching using the @Cacheable, @CachePut, and @CacheEvict annotations, backed by cache providers like Ehcache, Redis
+Annotation	Purpose
+@Cacheable	Stores method result in cache
+@CachePut	Updates the cache
+@CacheEvict	Removes an entry from the cache
 
+HOW DO YOU WRITE UNIT TESTS IN SPRING BOOT (JUNIT5, MOCKITO)?
+Ans - Writing unit tests is an essential part of ensuring the correctness of your Spring Boot application. With JUnit 5 and Mockito, 
+you can easily test your services, controllers, and repositories.
+Use @MockBean for mocking beans in Spring Boot tests.
+Use MockMvc to test HTTP requests and responses.
+Mockito helps mock objects, define behaviors, and verify method calls.
+JUnit 5 provides better support for assertions and lifecycle management (@Test, @BeforeEach, @AfterEach
 
+STEPS FOR DEPLOYING SPRING BOOT WITH DOCKER:
+1. Dockerfile:
+Create a Dockerfile to define the container's environment and instructions.
+2. Build the Docker Image:
+3.Run the Container:
 
 Interview Question ---
 ---------------------------
@@ -153,22 +181,6 @@ What is the diffence between application.properties file and application.yml fil
 Ans - The file format for application .properties file is key value pair and application.yml is YAML format which supports hierarchical data structures.
     - Readability - simple and easier for small configuration , become less readability , More readable for hierarchical or nested configurations Suitable for complex configurations
 	
-<<<<<<< HEAD
+
 What is the default server use in springboot ?
-Ans - Tomcat is the default server use , 
-how 
-=======
-
-Hibernate/JPA =====
--------------------------
-Hibernate = this is an orm tool / JPA - this a specification (set of rule )
-
-to perform any operation with database from java application we can do it by hibernate but for this we need 
-
-Session -> session factory ()-> configuration (data source config ) u have to do it in config.xml
-
-save , get 
-
-in every save,update and delete  method we have to do session.beginTranscation(), session.getTranscation.commit()
->>>>>>> 95de7d9822527fdff1282ede6c7cf5c7697f5668
-
+Ans - Tomcat is the default server use
